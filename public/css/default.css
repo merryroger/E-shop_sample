@@ -1,0 +1,19 @@
+:root {
+  --bgr-clr: #f4f4f4;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bgr-clr);
+  /*    font-family: Montserrat, Arial, sans-serif;
+  overflow-x: hidden;*/
+}
