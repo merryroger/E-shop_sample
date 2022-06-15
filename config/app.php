@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://nonamed.local'),
+    'url' => env('APP_URL', 'http://nemo.local'),
 
     'asset_url' => env('ASSET_URL', null),
 

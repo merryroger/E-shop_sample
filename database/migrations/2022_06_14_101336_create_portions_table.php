@@ -14,12 +14,14 @@ class CreatePortionsTable extends Migration
     public function up()
     {
         Schema::create('portions', function (Blueprint $table) {
-            $table->integerIncrements('id');
-            $table->integer('goods_id')->unsigned()->nullable(false)->default(0);
-            $table->string('article')->nullable(false)->default('');
-            $table->integer('initial_amount')->unsigned()->nullable(false)->default(0);
-            $table->integer('current_amount')->unsigned()->nullable(false)->default(0);
-            $table->integer('booked')->unsigned()->nullable(false)->default(0);
+            $table->increments('id');
+            $table->unsignedInteger('goods_id')->nullable(false)->default(0);
+            $table->unsignedInteger('article_id')->nullable(false)->default(0);
+            $table->float('price', 8, 2)->nullable(false)->default(0);
+            $table->float('min_price', 8, 2)->nullable(false)->default(0);
+            $table->unsignedInteger('initial_amount')->nullable(false)->default(0);
+            $table->unsignedInteger('current_amount')->nullable(false)->default(0);
+            $table->unsignedInteger('booked')->nullable(false)->default(0);
             $table->enum('status', ['off', 'on', 'suspended'])->default('off');
             $table->timestamps();
         });
