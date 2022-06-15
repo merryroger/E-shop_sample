@@ -31,6 +31,8 @@ class CreateMenuitemsTable extends Migration
             $table->unique(['access_group_id', 'node', 'mode', 'level', 'parent']);
             $table->timestamps();
         });
+
+        (new \Database\Seeders\MenuitemSeeder())->run();
     }
 
     /**
