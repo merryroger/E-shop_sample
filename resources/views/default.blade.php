@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет-магазин «Немо»</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/default.css">
 </head>
 
 <body>
@@ -32,17 +32,17 @@
         <nav class="header__nav">
             <ul class="ul-reset header-menu-list">
                 <li class="menu-item">
-                    <a class="links menu-link" href="/">
+                    <a class="links menu-link" href="/about">
                         О магазине
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a class="links menu-link" href="/">
+                    <a class="links menu-link" href="/pay_and_delivery">
                         Оплата и доставка
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a class="links menu-link" href="/">
+                    <a class="links menu-link" href="/contacts">
                         Контактная информация
                     </a>
                 </li>
