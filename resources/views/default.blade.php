@@ -20,7 +20,7 @@
             </button>
             <button class="shop-auth" tabindex="0">
                 <div class="auth-panel tooltip">
-                    
+
                 </div>
             </button>
             <button class="shop-news" tabindex="0">
