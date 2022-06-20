@@ -18,7 +18,11 @@
             <button class="shop-cart cart-disabled" tabindex="0">
                 <span class="tooltip">Корзина пуста</span>
             </button>
-            <button class="shop-auth" tabindex="0"></button>
+            <button class="shop-auth" tabindex="0">
+                <div class="auth-panel tooltip">
+                    
+                </div>
+            </button>
             <button class="shop-news" tabindex="0">
                 <span class="tooltip">Новости и события</span>
             </button>

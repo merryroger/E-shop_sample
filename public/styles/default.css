@@ -1,8 +1,8 @@
 :root {
+  --footer-bgr: #000b18;
   --main-clr: #001733;
   --menu-item-hdr: rgba(0, 11, 21, .75);
   --menu-hover-clr: #7c8186;
-  /*#cc5c00;*/
   --search-btn-clr: rgba(244, 244, 244, .75);
   --bgr-clr: #f4f4f4;
   --pure-white-clr: #fff;
@@ -396,7 +396,7 @@ img {
 
 .footer {
   padding: 40px 0;
-  background-color: #001017;
+  background-color: var(--footer-bgr);
 }
 
 .footer h5,
