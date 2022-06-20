@@ -19,13 +19,20 @@
                 <span class="tooltip">Корзина пуста</span>
             </button>
             <button class="shop-auth" tabindex="0">
-                <div class="auth-panel tooltip">
-
-                </div>
+                <span class="tooltip">Личный кабинет: вход / регистрация</span>
             </button>
             <button class="shop-news" tabindex="0">
                 <span class="tooltip">Новости и события</span>
             </button>
+            <div class="auth-panel hidden">
+                <h6>Личный кабинет</h6>
+                <form class="sign-form" action="/" method="post">
+
+                </form>
+                <button class="sign-mode-button" type="button">
+                    <span>Хочу зарегистрироваться</span>
+                </button>
+            </div>
         </div>
         <img src="./images/Logo.jpg" alt="Логотип Немо">
         <div class="headers">

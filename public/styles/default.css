@@ -4,6 +4,7 @@
   --menu-item-hdr: rgba(0, 11, 21, .75);
   --menu-hover-clr: #7c8186;
   --search-btn-clr: rgba(244, 244, 244, .75);
+  --hint-bgr: #f3dd83;//#fbf292;
   --bgr-clr: #f4f4f4;
   --pure-white-clr: #fff;
 
@@ -155,30 +156,27 @@ img {
   top: 140%;
   right: 0;
   z-index: 1;
-  color: var(--bgr-clr);
-  background-color: var(--main-clr);
+  color: var(--main-clr);
+  background-color: var(--hint-bgr);
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 13px;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.25);
   transition: opacity .2s ease-in, visibility .5s linear;
 }
 
-.service-controls button:focus > span.tooltip,
-.service-controls button:focus > div.tooltip {
+.service-controls button:focus > span.tooltip {
   z-index: 1;
 }
 
-.service-controls button:hover > span.tooltip,
-.service-controls button:focus > div.tooltip {
+.service-controls button:hover > span.tooltip {
   z-index: 2;
 }
 
 .service-controls button:focus > span.tooltip,
-.service-controls button:focus > div.tooltip,
-.service-controls button:hover > span.tooltip,
-.service-controls button:hover > div.tooltip {
+.service-controls button:hover > span.tooltip {
   opacity: 1;
   visibility: visible;
   transition: opacity .5s ease-in, visibility .5s linear;
@@ -187,32 +185,66 @@ img {
 .service-controls button > span.tooltip::before {
   position: absolute;
   content: "";
-  right: 15px;
-  bottom: 11px;
-  width: 20px;
-  height: 10px;
-  z-index: -1;
-  background-color: var(--main-clr);
-  transform: rotate(-35deg) skewX(-60deg);
+  right: 12px;
+  top: -4px;
+  width: 10px;
+  height: 5px;
+  z-index: -20;
+  border-right: 1px solid var(--menu-hover-clr);
+  background-color: var(--hint-bgr);
+  transform: rotate(-45deg) skewX(-60deg);
 }
 
-.service-controls button > div.tooltip {
-    position: absolute;
-    padding: 4px 10px 5px;
-    top: 140%;
-    right: 0;
-    width: 100px;
-    min-height: 20px;
-    z-index: 1;
-    color: var(--bgr-clr);
-    background-color: var(--pure-white-clr);
-    border-radius: 5px;
-    font-size: 12px;
-    white-space: nowrap;
-    box-shadow: 4px 4px 8px rgba(0,0,0,.25);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .2s ease-in, visibility .5s linear;
+.service-controls div.auth-panel {
+  position: absolute;
+  padding: 8px 0;
+  top: 120%;
+  right: 10px;
+  min-height: 20px;
+  z-index: 1;
+  color: var(--bgr-clr);
+  background-color: var(--main-clr);
+  border: 1px solid var(--main-clr);
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 4px 4px 10px rgba(0,0,0,.35);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .2s ease-in, visibility .5s linear;
+}
+
+div.auth-panel h6 {
+  margin: 0;
+  margin-bottom: 10px;
+  min-width: 200px;
+  text-indent: 20px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.sign-form {
+  margin-bottom: 4px;
+  padding: 15px 20px;
+  background-color: var(--bgr-clr);
+}
+
+div.auth-panel button.sign-mode-button {
+  width: 100%;
+  padding: 0 10px;
+  border: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--bgr-clr);
+  background-color: var(--main-clr);
+  outline: none;
+}
+
+button.sign-mode-button > span {
+  display: inline-block;
+  padding: 2px 0;
+  border-bottom: 1px dotted var(--bgr-clr);
 }
 
 .header .container {
