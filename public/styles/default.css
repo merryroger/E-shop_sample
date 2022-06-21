@@ -186,11 +186,10 @@ img {
   position: absolute;
   content: "";
   right: 12px;
-  top: -4px;
-  width: 10px;
+  top: -2px;
+  width: 12px;
   height: 5px;
   z-index: -20;
-  border-right: 1px solid var(--menu-hover-clr);
   background-color: var(--hint-bgr);
   transform: rotate(-45deg) skewX(-60deg);
 }
@@ -224,9 +223,24 @@ div.auth-panel h6 {
 }
 
 .sign-form {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4px;
   padding: 15px 20px;
-  background-color: var(--bgr-clr);
+  background-color: var(--pure-white-clr);
+}
+
+.sign-form-label {
+  margin-bottom: 4px;
+  text-indent: 7px;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--main-clr);
+}
+
+.sign-form-element {
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 div.auth-panel button.sign-mode-button {
