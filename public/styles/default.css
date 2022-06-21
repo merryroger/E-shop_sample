@@ -4,6 +4,7 @@
   --menu-item-hdr: rgba(0, 11, 21, .75);
   --menu-hover-clr: #7c8186;
   --search-btn-clr: rgba(244, 244, 244, .75);
+  --light-brd-clr: #888;
   --hint-bgr: #f3dd83;//#fbf292;
   --bgr-clr: #f4f4f4;
   --pure-white-clr: #fff;
@@ -196,11 +197,11 @@ img {
 
 .service-controls div.auth-panel {
   position: absolute;
-  padding: 8px 0;
-  top: 120%;
+  padding: 8px 0 4px;
+  top: 50%;
   right: 10px;
   min-height: 20px;
-  z-index: 1;
+  z-index: 4;
   color: var(--bgr-clr);
   background-color: var(--main-clr);
   border: 1px solid var(--main-clr);
@@ -219,14 +220,14 @@ div.auth-panel h6 {
   min-width: 200px;
   text-indent: 20px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .sign-form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4px;
-  padding: 15px 20px;
+  margin-bottom: 2px;
+  padding: 15px 20px 20px;
   background-color: var(--pure-white-clr);
 }
 
@@ -241,6 +242,35 @@ div.auth-panel h6 {
 .sign-form-element {
   margin: 0;
   margin-bottom: 16px;
+  width: 100%;
+}
+
+input.sign-form-element {
+  padding: 3px 10px;
+  width: 100%;
+  height: 27px;
+  border: 1px solid var(--light-brd-clr);
+  border-radius: 5px;
+  color: var(--main-clr);
+}
+
+input.sign-form-button {
+  padding: 3px 10px;
+  width: 100%;
+  height: 23px;
+  border: 1px solid var(--light-brd-clr);
+  border-radius: 5px;
+  color: var(--main-clr);
+  background-color: var(--bgr-clr);
+  cursor: pointer;
+}
+
+.sign-form input:nth-last-child(2) {
+  margin-bottom: 30px;
+}
+
+input.sign-form-element[type="button"] {
+  background-color: var(--bgr-clr);
 }
 
 div.auth-panel button.sign-mode-button {
@@ -363,6 +393,7 @@ button.sign-mode-button > span {
 }
 
 /* search form @ Main section */
+
 .search-panel {
   flex-grow: 0;
 }

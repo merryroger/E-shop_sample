@@ -30,13 +30,13 @@
                     <label class="sign-form-label label-auth-type" for="email">Войти:</label>
                     <select class="sign-form-element auth-type" name="auth-type" id="auth-type">
                         <option value="email" selected>через e-mail</option>
-                        <option value="login">id / паролю</option>
+                        <option value="login">по id и паролю</option>
                     </select>
                     <label class="sign-form-label label-email" for="email">Логин:</label>
                     <input class="sign-form-element" name="email" id="email" type="email" placeholder="Ваш e-mail" required>
                     <label class="sign-form-label label-password" for="password">Пароль:</label>
                     <input class="sign-form-element" name="password" id="password" type="password" required>
-                    <burron>Отправить</burron>
+                    <input class="sign-form-button" type="button" value="Отправить">
                 </form>
                 <button class="sign-mode-button" type="button">
                     <span>Хочу зарегистрироваться</span>
