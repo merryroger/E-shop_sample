@@ -5,6 +5,9 @@
   --menu-hover-clr: #7c8186;
   --search-btn-clr: rgba(244, 244, 244, .75);
   --light-brd-clr: #888;
+  --light-hover-clr: #9ca1a6;
+  --form-error-clr: #cc3300;
+  --form-error-bgr: rgba(204, 51, 0, .5);
   --hint-bgr: #f3dd83;//#fbf292;
   --bgr-clr: #f4f4f4;
   --pure-white-clr: #fff;
@@ -88,6 +91,10 @@ img {
 .links {
   text-decoration: none;
   outline: none;
+}
+
+.collapsed {
+  display: none;
 }
 
 /*** Header ***/
@@ -203,8 +210,8 @@ img {
   min-height: 20px;
   z-index: 4;
   color: var(--bgr-clr);
-  background-color: var(--main-clr);
-  border: 1px solid var(--main-clr);
+  background-color: var(--footer-bgr);
+  border: 1px solid var(--footer-bgr);
   border-radius: 10px;
   font-size: 12px;
   white-space: nowrap;
@@ -227,8 +234,77 @@ div.auth-panel h6 {
   display: flex;
   flex-direction: column;
   margin-bottom: 2px;
-  padding: 15px 20px 20px;
+  padding: 25px 30px 25px;
   background-color: var(--pure-white-clr);
+}
+
+.choices {
+  position: relative;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: var(--main-clr);
+  background-color: var(--bgr-clr);
+}
+
+.choices[data-type*=select-one]:after {
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  top: 12px;
+  right: 16px;
+  z-index: 3;
+  border-width: 0px;
+  border-left: 1px solid;
+  border-bottom: 1px solid var(--main-clr);
+  transform: rotate(-45deg);
+  margin-top: -6px;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  z-index: 3;
+  border-width: 0px;
+  border-right: 1px solid var(--main-clr);
+  border-top: 1px solid var(--main-clr);
+  margin-top: -2px;
+}
+
+.choices__inner {
+  position: relative;
+  padding: 1px 6px;
+  min-height: auto;
+  height: 27px;
+  border-radius: 5px;
+  border: 1px solid var(--light-brd-clr);
+  font-size: 13px;
+  z-index: 2;
+}
+
+.is-focused .choices__inner {
+  border: 1px solid var(--menu-item-hdr);
+}
+
+.is-open .choices__inner {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.is-open div.choices__list--dropdown {
+  padding: 0;
+  border-color: var(--light-brd-clr) !important;
+  border-top-width: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.choices__list {
+  word-break: normal;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  padding-top: 6px;
+  padding-bottom: 5px;
+  font-size: 13px;
 }
 
 .sign-form-label {
@@ -243,6 +319,7 @@ div.auth-panel h6 {
   margin: 0;
   margin-bottom: 16px;
   width: 100%;
+  font-size: 13px;
 }
 
 input.sign-form-element {
@@ -252,6 +329,12 @@ input.sign-form-element {
   border: 1px solid var(--light-brd-clr);
   border-radius: 5px;
   color: var(--main-clr);
+  outline: none;
+}
+
+input.sign-form-element:invalid {
+  border: 1px solid var(--form-error-clr);
+  background-color: var(--form-error-bgr);
 }
 
 input.sign-form-button {
@@ -260,17 +343,27 @@ input.sign-form-button {
   height: 23px;
   border: 1px solid var(--light-brd-clr);
   border-radius: 5px;
-  color: var(--main-clr);
-  background-color: var(--bgr-clr);
+  color: var(--bgr-clr);
+  background-color: var(--menu-hover-clr);
   cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+}
+
+input.sign-form-element:focus,
+input.sign-form-button:focus {
+  outline: 1px solid var(--menu-item-hdr);
+}
+
+input.sign-form-button:hover {
+  outline: none;
+}
+
+input.sign-form-button:active {
+  box-shadow: none;
 }
 
 .sign-form input:nth-last-child(2) {
-  margin-bottom: 30px;
-}
-
-input.sign-form-element[type="button"] {
-  background-color: var(--bgr-clr);
+  margin-bottom: 40px;
 }
 
 div.auth-panel button.sign-mode-button {
@@ -280,15 +373,21 @@ div.auth-panel button.sign-mode-button {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-  color: var(--bgr-clr);
-  background-color: var(--main-clr);
+  color: var(--light-hover-clr);
+  background-color: var(--footer-bgr);
   outline: none;
 }
 
 button.sign-mode-button > span {
   display: inline-block;
   padding: 2px 0;
-  border-bottom: 1px dotted var(--bgr-clr);
+  border-bottom: 1px dotted var(--light-hover-clr);
+}
+
+button.sign-mode-button:focus > span,
+button.sign-mode-button:hover > span {
+  color: var(--bgr-clr);
+  border-bottom: 1px solid var(--bgr-clr);
 }
 
 .header .container {

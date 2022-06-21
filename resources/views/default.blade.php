@@ -8,7 +8,11 @@
     <title>Интернет-магазин «Немо»</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/choices.min.css">
     <link rel="stylesheet" href="./styles/default.css">
+    <script src="/jslibs/components/choices.min.js"></script>
+    <script src="/jslibs/components/just-validate.min.js"></script>
+    <script src="/jslibs/components/sign.in.js"></script>
 </head>
 
 <body>
@@ -26,7 +30,7 @@
             </button>
             <div class="auth-panel hidden">
                 <h6>Личный кабинет</h6>
-                <form class="sign-form" action="/" method="post">
+                <form class="sign-form" id="sign-form" action="/" method="post">
                     <label class="sign-form-label label-auth-type" for="email">Войти:</label>
                     <select class="sign-form-element auth-type" name="auth-type" id="auth-type">
                         <option value="email" selected>через e-mail</option>
@@ -34,9 +38,9 @@
                     </select>
                     <label class="sign-form-label label-email" for="email">Логин:</label>
                     <input class="sign-form-element" name="email" id="email" type="email" placeholder="Ваш e-mail" required>
-                    <label class="sign-form-label label-password" for="password">Пароль:</label>
-                    <input class="sign-form-element" name="password" id="password" type="password" required>
-                    <input class="sign-form-button" type="button" value="Отправить">
+                    <label class="sign-form-label label-password collapsed" for="password">Пароль:</label>
+                    <input class="sign-form-element collapsed" name="password" id="password" type="password" required>
+                    <input class="sign-form-button" type="submit" value="Отправить">
                 </form>
                 <button class="sign-mode-button" type="button">
                     <span>Хочу зарегистрироваться</span>
