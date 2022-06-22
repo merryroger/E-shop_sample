@@ -20,7 +20,7 @@ function initSignForm() {
             document.body.querySelector('.label-password').classList.remove('collapsed');
             document.body.querySelector('#password').classList.remove('collapsed');
 
-            appendPaswordField();
+            appendPasswordField();
         } else {
             document.body.querySelector('.label-password').classList.add('collapsed');
             document.body.querySelector('#password').classList.add('collapsed');
@@ -53,7 +53,7 @@ function initSignFormValidator(fm) {
         });
 }
 
-function appendPaswordField() {
+function appendPasswordField() {
     document.body.querySelector('#email').style.marginBottom = '16px';
     signFormValidator.addField('#password',
         [

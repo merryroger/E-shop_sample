@@ -28,7 +28,7 @@
             <button class="shop-news" tabindex="0">
                 <span class="tooltip">Новости и события</span>
             </button>
-            <div class="auth-panel hidden">
+            <div class="auth-panel invisible">
                 <h6>Личный кабинет</h6>
                 <form class="sign-form" id="sign-form" action="/" method="post">
                     <label class="sign-form-label label-auth-type" for="email">Войти:</label>
