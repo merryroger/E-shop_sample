@@ -25,6 +25,8 @@ class CreateSectionsTable extends Migration
             $table->timestamps();
             $table->unique(['name', 'bip']);
         });
+
+        (new \Database\Seeders\SectionSeeder())->run();
     }
 
     /**

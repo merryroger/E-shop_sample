@@ -22,7 +22,7 @@ class PageController extends Controller
 
         $this->request = $request->request->all();
         $this->section = $this->retrieveTrueSection($section, true);
-dd($this->section);
+
         return $this->render();
     }
 
