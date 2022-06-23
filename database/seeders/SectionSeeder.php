@@ -37,17 +37,7 @@ class SectionSeeder extends Seeder
             [
                 'id' => 3,
                 'bip' => 0x1,
-                'name' => 'how2buy',
-                'entry_point' => 'templates.guest.subpage',
-                'gen_view' => 'default',
-                'template' => 'templates.guest.how2buy',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'id' => 4,
-                'bip' => 0x1,
-                'name' => 'paymentanddelivery',
+                'name' => 'payment_and_delivery',
                 'entry_point' => 'templates.guest.subpage',
                 'gen_view' => 'default',
                 'template' => 'templates.guest.paymentdelivery',
@@ -55,7 +45,7 @@ class SectionSeeder extends Seeder
                 'updated_at' => now()
             ],
             [
-                'id' => 5,
+                'id' => 4,
                 'bip' => 0x1,
                 'name' => 'contacts',
                 'entry_point' => 'templates.guest.contacts',

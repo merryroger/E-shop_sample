@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./styles/default.css">
     <script src="/jslibs/components/choices.min.js"></script>
     <script src="/jslibs/components/just-validate.min.js"></script>
-    <script src="/jslibs/components/sign.in.js"></script>
+    <!--script src="/jslibs/components/sign.in.js"></script-->
 </head>
 
 <body>
